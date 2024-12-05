@@ -243,7 +243,7 @@ export function parseSingle<T>(
   if (res.results.length !== 1) {
     throw new Error(
       "node-influx expected the results length to equal 1, but " +
-        `it was ${0}. Please report this here: https://git.io/influx-err`
+        `it was ${res.results.length}. Please report this here: https://git.io/influx-err`
     );
   }
 

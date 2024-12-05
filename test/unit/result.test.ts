@@ -222,4 +222,12 @@ describe("results", () => {
       })
     ).to.throw(/already exists/);
   });
+
+  it("throws an error containing the number of elements if the result set contains more than one element", () => {
+    expect(() => {
+      results.parseSingle({
+        results: [{}, {}],
+      });
+    }).to.throw(/expected the results length to equal 1, but it was 2/);
+  });
 });
